@@ -27,17 +27,29 @@ This project is a professional, responsive portfolio homepage that demonstrates 
 
 ## Project Structure
 starter/
+
 ├── dist/
+
 │ └── main.css # Compiled CSS from SCSS
+
 ├── src/
+
 │ ├── img/ # All images (profile, background, projects)
+
 │ ├── scss/ # SCSS files (BEM-based organization)
+
 │ │ ├── base/
+
 │ │ ├── blocks/
+
 │ │ ├── utils/
+
 │ │ └── main.scss
+
 │ └── index.html # The main homepage file
+
 ├── package.json # Project dependencies and build scripts
+
 └── package-lock.json # Exact versions for dependencies
 
 ---
@@ -64,5 +76,7 @@ Open `src/index.html` in your browser, or use an extension like **Live Server** 
 
 > You can easily customize the content, images, and style to reflect your personal brand and skills!
 <img width="949" alt="image" src="https://github.com/user-attachments/assets/00d2d25b-b0c5-4f2e-b872-352f13ba9972" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/e67d7365-559f-44ec-9a00-c154d5b3949e" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/d8a19234-94ef-45af-a8c6-a44072b77c1e" />
 
 
