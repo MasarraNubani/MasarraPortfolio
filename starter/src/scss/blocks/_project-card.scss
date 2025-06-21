@@ -1,0 +1,52 @@
+@use '../utils/utils';
+
+.projects {
+  padding: 60px 0;
+  background: #fff;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    @include utils.respond(mobile) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}
+.project-card {
+  background: utils.$alt-bg;
+  border-radius: utils.$border-radius;
+  box-shadow: 0 4px 16px rgba(90,104,209,0.07);
+  width: 280px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  &:hover, &:focus-within {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(90,104,209,0.14);
+  }
+
+  &__img {
+    border-radius: utils.$border-radius;
+    margin-bottom: 1rem;
+    height: 120px;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  &__desc {
+    color: #444;
+    font-size: 1rem;
+  }
+}

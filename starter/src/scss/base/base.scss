@@ -1,0 +1,19 @@
+@use './resets';
+@use '../utils/utils';
+
+body {
+  font-family: utils.$font-main;
+  background: utils.$alt-bg;
+  color: #222;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

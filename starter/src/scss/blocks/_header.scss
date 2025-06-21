@@ -1,0 +1,36 @@
+@use '../utils/utils';
+
+.header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: #23272a; 
+  color: #fff;          
+  @include utils.flex-center;
+  justify-content: space-between;
+  height: 80px;
+  transition: height 0.3s;
+  z-index: 100;
+
+  &__logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    color: #fff; 
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+    list-style: none;
+  }
+
+  &__nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #fff; 
+    &:focus, &:hover {
+      color: utils.$primary-color;
+    }
+  }
+}

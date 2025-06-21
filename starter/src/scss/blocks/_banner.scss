@@ -1,0 +1,51 @@
+@use '../utils/utils';
+
+.banner {
+  background: url('../img/background.jpg') center/cover no-repeat;
+  padding: 120px 0 60px 0;
+  @include utils.flex-center;
+
+  &__container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(255,255,255,0.7);
+    padding: 2rem;
+    border-radius: utils.$border-radius;
+    @include utils.respond(mobile) {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  }
+
+  &__img {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid utils.$primary-color;
+  }
+
+  &__bio {
+    max-width: 400px;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 1rem;
+    @include utils.respond(mobile) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
