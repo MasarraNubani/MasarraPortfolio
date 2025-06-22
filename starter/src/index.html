@@ -7,22 +7,21 @@
   <link rel="stylesheet" href="../dist/main.css" />
 </head>
 <body>
-<header class="header">
-  <div class="header__logo">Masarra</div>
-  <button class="header__burger" aria-label="Open navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="header__nav">
-    <ul class="header__nav-list">
-      <li><a href="#projects" class="header__nav-link">Projects</a></li>
-      <li><a href="#skills" class="header__nav-link">Skills</a></li>
-      <li><a href="#resume" class="header__nav-link">Resume</a></li>
-      <li><a href="#contact" class="header__nav-link">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="header">
+    <div class="header__logo">Masarra</div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li><a href="#projects" class="header__nav-link">Projects</a></li>
+        <li><a href="#skills" class="header__nav-link">Skills</a></li>
+        <li><a href="#resume" class="header__nav-link">Resume</a></li>
+        <li><a href="#contact" class="header__nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  
+  
   <main>
     <section class="banner">
       <div class="banner__container">
@@ -68,14 +67,8 @@
       </address>
     <p>&copy; 2025 Masarra Nubani. All rights reserved</p>
 </footer>
-  <script>
-  const burger = document.querySelector('.header__burger');
-  const nav = document.querySelector('.header__nav');
-  burger.addEventListener('click', function() {
-    nav.classList.toggle('active');
-    burger.classList.toggle('active');
-  });
-</script>
+
+
 
 </body>
 </html>
