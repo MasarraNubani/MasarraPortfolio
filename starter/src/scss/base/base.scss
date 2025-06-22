@@ -17,3 +17,9 @@ img {
   max-width: 100%;
   display: block;
 }
+
+main {
+  @media (max-width: 700px) {
+    padding-top: 260px; 
+  }
+}
