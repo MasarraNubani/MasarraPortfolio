@@ -2,10 +2,13 @@
 
 .header {
   position: fixed;
-  top: 0; left: 0; width: 100%;
-  background: #23272a; 
-  color: #fff;          
-  @include utils.flex-center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #23272a;
+  color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 80px;
   transition: height 0.3s;
@@ -15,7 +18,30 @@
     font-weight: bold;
     font-size: 1.5rem;
     padding-left: 2rem;
-    color: #fff; 
+    color: #fff;
+    z-index: 101;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    position: static;
+    width: auto;
+
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100vw;
+      background: #23272a;
+      position: absolute; 
+      left: 0;
+      margin-top: 0;
+      top: 80px; 
+      box-sizing: border-box;
+      padding: 0;
+      z-index: 99;
+    }
   }
 
   &__nav-list {
@@ -23,61 +49,41 @@
     gap: 2rem;
     padding-right: 2rem;
     list-style: none;
+    margin: 0;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      gap: 0;
+      width: 100vw;
+      align-items: stretch;
+      padding: 0;
+      box-sizing: border-box;
+    }
   }
 
   &__nav-link {
-    position: relative;
     font-weight: 500;
-    color: #fff; 
-    &:focus, &:hover {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    padding: 1rem 2rem;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
       color: utils.$primary-color;
     }
-  }
-   &__burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 1rem;
-    z-index: 999;
 
-    span {
+    @media (max-width: 700px) {
       display: block;
-      width: 30px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s;
+      width: 100vw;
+      text-align: left;
+      font-size: 1rem; 
+      padding: 0.7rem 2rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #444;
+      overflow-wrap: break-word;
     }
-
-    @include utils.respond(mobile) {
-      display: flex;
-    }
-  }
-
-  &__nav {
-    @include utils.respond(mobile) {
-      display: none;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      background: #23272a;
-      flex-direction: column;
-      align-items: center;
-
-      &.active {
-        display: flex;
-        animation: navFadeIn 0.3s;
-      }
-    }
-  }
-
-  @keyframes navFadeIn {
-    from { opacity: 0; transform: translateY(-15px);}
-    to { opacity: 1; transform: translateY(0);}
   }
 }
