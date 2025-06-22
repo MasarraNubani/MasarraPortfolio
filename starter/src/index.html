@@ -9,6 +9,11 @@
 <body>
   <header class="header">
     <div class="header__logo">Masarra</div>
+    <button class="header__burger" aria-label="Open navigation" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li><a href="#projects" class="header__nav-link">Projects</a></li>
@@ -18,17 +23,14 @@
       </ul>
     </nav>
   </header>
-  
-  
-  
-  
+
   <main>
     <section class="banner">
       <div class="banner__container">
         <img src="img/me.jpg" alt="Masarra Nubani's photo" class="banner__img"/>
         <div class="banner__bio">
           <h1 class="banner__heading">Masarra Nubani’s Web Development Portfolio</h1>
-          <p class="banner__desc">I’m a  very passionate web developer who loves accessible, creative design and modern coding, and making web projects also learn new things.</p>
+          <p class="banner__desc">I’m a very passionate web developer who loves accessible, creative design and modern coding, and making web projects also learn new things.</p>
           <div class="banner__cta">
             <a href="#projects" class="button button--primary">View Projects</a>
             <a href="#contact" class="button button--alt">Contact Me</a>
@@ -61,14 +63,29 @@
 
   <footer class="footer">
     <address>
-        <strong>Address:</strong>Birzeit<br>
-        <strong>Phone:</strong> <a href="tel:+972566101783">📞 Support: +972566101783</a><br>
-        <strong>Email:</strong> <a href="mailto:masarranubani14@gmail.com">✉️ Email: masarranubani@gmail.com</a>
-      </address>
+      <strong>Address:</strong> Birzeit<br>
+      <strong>Phone:</strong> <a href="tel:+972566101783">📞 Support: +972566101783</a><br>
+      <strong>Email:</strong> <a href="mailto:masarranubani14@gmail.com">✉️ Email: masarranubani@gmail.com</a>
+    </address>
     <p>&copy; 2025 Masarra Nubani. All rights reserved</p>
-</footer>
+  </footer>
 
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if(window.scrollY > 10) {
+        header.classList.add('header--shrink');
+      } else {
+        header.classList.remove('header--shrink');
+      }
+    });
 
-
+    const burger = document.querySelector('.header__burger');
+    const nav = document.querySelector('.header__nav');
+    burger.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
